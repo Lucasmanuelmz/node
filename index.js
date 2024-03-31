@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
       }
     });
   } else {
-    fs.readFile('/404.html', (err, data) => {
+    fs.readFile('404.html', (err, data) => {
       if (err) {
         res.writeHead(500, { 'Content-Type': 'text/html' });
         res.end('500 Error server');
